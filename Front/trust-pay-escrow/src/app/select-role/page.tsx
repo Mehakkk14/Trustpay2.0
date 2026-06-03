@@ -86,27 +86,29 @@ export default function SelectRolePage() {
       >
         {/* Header */}
         <motion.div className="text-center mb-16 space-y-4" variants={itemVariants}>
-          <Link href="/" className="inline-flex items-center gap-2 font-bold text-lg group">
+          <div className="flex flex-col items-center gap-3">
+            <Link href="/" className="inline-flex items-center gap-2 font-bold text-lg group">
+              <motion.div 
+                className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 shadow-lg shadow-indigo-500/20"
+                whileHover={{ scale: 1.05, boxShadow: '0 0 20px rgba(99, 102, 241, 0.4)' }}
+              >
+                <Shield className="h-5 w-5 text-white" />
+              </motion.div>
+              <span className="gradient-text-primary font-[800]">Trust Pay</span>
+              <span className="text-foreground/50 font-normal text-xs tracking-wide">ESCROW</span>
+            </Link>
+
             <motion.div 
-              className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 shadow-lg shadow-indigo-500/20"
-              whileHover={{ scale: 1.05, boxShadow: '0 0 20px rgba(99, 102, 241, 0.4)' }}
+              className="inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 px-4 py-2 text-sm font-medium text-indigo-400 backdrop-blur-xl"
+              animate={{ y: [0, -2, 0] }}
+              transition={{ duration: 3, repeat: Infinity }}
             >
-              <Shield className="h-5 w-5 text-white" />
+              <Zap className="h-4 w-4" />
+              Choose your role to get started
             </motion.div>
-            <span className="gradient-text-primary font-[800]">Trust Pay</span>
-            <span className="text-foreground/50 font-normal text-xs tracking-wide">ESCROW</span>
-          </Link>
+          </div>
 
-          <motion.div 
-            className="inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 px-4 py-2 text-sm font-medium text-indigo-400 backdrop-blur-xl"
-            animate={{ y: [0, -2, 0] }}
-            transition={{ duration: 3, repeat: Infinity }}
-          >
-            <Zap className="h-4 w-4" />
-            Choose your role to get started
-          </motion.div>
-
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-[900] text-foreground leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-[900] text-foreground leading-normal">
             How will you use
             <motion.span 
               className="gradient-text block"
