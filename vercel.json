@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "Front/trust-pay-escrow/package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "Front/trust-pay-escrow/$1"
+    }
+  ]
+}
